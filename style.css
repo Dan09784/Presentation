@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    display: flex;
+    text-align: center;
+    color: white;
+    background: linear-gradient(270deg, #1a0044, #281212);
+    align-items: center;
+    justify-content: center;
+}
+.contenu{
+    margin-top: 10%;
+    
+}
+.banniere{
+    display: flex;
+    margin: 10px;
+    gap: 40px;
+    justify-content: space-between;
+    filter: drop-shadow(1px 2px 20px rgb(153, 0, 255));
+}
+.ecrit{
+    margin: 60px;
+    color: wheat;
+}
+span{
+     background: linear-gradient(90deg, rgb(157, 0, 255),rgb(149, 65, 212),rgb(127, 42, 167));
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     filter: drop-shadow(2px 3px 22px rgb(231, 122, 240));
+     font-size: 40px;
+     font-weight: bold;
+}
+.ppp{
+    font-size: 40px;
+}
+.net{
+    filter: drop-shadow(2px 5px 20px rgb(202, 221, 144));
+}

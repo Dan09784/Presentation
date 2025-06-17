@@ -31,12 +31,12 @@ body{
     color: wheat;
 }
 span{
-     background: linear-gradient(90deg, rgb(157, 0, 255),rgb(149, 65, 212),rgb(127, 42, 167));
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     filter: drop-shadow(2px 3px 22px rgb(231, 122, 240));
-     font-size: 40px;
-     font-weight: bold;
+background: linear-gradient(90deg, rgb(157, 0, 255),rgb(149, 65, 212),rgb(127, 42, 167));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+filter: drop-shadow(2px 3px 22px rgb(231, 122, 240));
+font-size: 40px;
+font-weight: bold;
 }
 .ppp{
     font-size: 40px;

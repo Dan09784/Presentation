@@ -6,6 +6,7 @@
     scroll-behavior: smooth;
     text-decoration: none;
     list-style: none;
+    animation: alternate-reverse;
 }
 body{
     display: flex;
@@ -14,7 +15,27 @@ body{
     background: linear-gradient(270deg, #1a0044, #281212);
     align-items: center;
     justify-content: center;
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    color: #fff;
 }
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+ @keyframes fadeInBody{
+            form{
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+        }
 .contenu{
     margin-top: 10%;
     

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chargement...</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(270deg, #1a0044, #281212);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: gradientBG 8s ease infinite;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .loader {
+            border: 6px solid rgb(64, 8, 129);
+            border-top: 6px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin-top: 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="message">
+        <h1>Chargement en cours.....vous allez etre redirigé dans un instant</h1>
+    </div>
+    <script>
+        setTimeout(function(){
+            window.location.href="partie2.html";
+        },5000);
+    </script>
+</body>
+</html>

@@ -1,19 +1,238 @@
-*{
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Professional, clean font */
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-decoration: none;
-    list-style: none;
+    background: linear-gradient(270deg, #1a0044, #281212);
+    color: (270deg, #6810f5, #f71e1e);
+    line-height: 1.6;
+    zoom: 1.3;
+}
+.bannier {
+    display: flex;
+    justify-content: space-between;
+    color: #6810f5;
+    align-items: center;
+    padding: 20px 5%;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-#loop{
-    display: block;
-}
-#banniere{
+.bannier h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 700;
     display: flex;
-    justify-content: center;
-    justify-items: center;
+    align-items: center;
+}
+
+.bannier h1 #loop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bannier h1 h2 {
+    font-size: 0.6em; /* Smaller for the tagline */
+    font-weight: 400;
+    color: #bdc3c7; /* Slightly lighter for the tagline */
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.bannier h1 h2 img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+#source{
+    background-color: white;
+}
+#banniere {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+#banniere li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+#banniere li a:hover {
+    color: rgb(140, 5, 243) solid 5PX;
+    filter: drop-shadow(0 4px 25px rgba(215, 73, 33, 0.986));
+    zoom: 1.2;
+    border-bottom: rgb(140, 5, 243) solid 2PX;
+}
+.contenue {
+    padding: 50px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.truck {
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(161, 65, 250, 0.986); /* More pronounced shadow */
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.truck h1 {
+    font-size: 3.5em;
+    color: #9cc9f6;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.truck h3 {
+    font-size: 1.8em;
+    color: #8612e6;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.truck h5 {
+    font-size: 1.1em;
+    color: #786a6a;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+.truck button {
+    background-color: #a134db; /* Primary accent color */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
     
-    gap: 9px;
+    filter: drop-shadow(0 4px 25px rgba(161, 65, 250, 0.986));
+}
+
+.truck button:hover {
+    filter: drop-shadow(0 4px 25px rgba(215, 73, 33, 0.986));
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Specific button styles for skills */
+.truck button:nth-of-type(1),
+.truck button:nth-of-type(2),
+.truck button:nth-of-type(3),
+.truck button:nth-of-type(4) {
+    background-color: #b151e9; /* Different color for skill buttons */
+    color: white;
+    font-size: 0.9em;
+    padding: 8px 18px;
+}
+
+.truck button:nth-of-type(1):hover,
+.truck button:nth-of-type(2):hover,
+.truck button:nth-of-type(3):hover,
+.truck button:nth-of-type(4):hover {
+    background-color: #936a96;
+}
+
+/* Social Icons */
+.truck img {
+    margin: 20px 10px 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.truck img:hover {
+    filter: drop-shadow(0 4px 25px rgba(161, 65, 250, 0.986));
+    background-color: #ecf0f1;
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+.social img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bannier {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #banniere {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .bannier h1 {
+        font-size: 1.8em;
+    }
+
+    .bannier h1 h2 {
+        font-size: 0.5em;
+    }
+
+    .truck h1 {
+        font-size: 2.5em;
+    }
+
+    .truck h3 {
+        font-size: 1.4em;
+    }
+
+    .truck h5 {
+        font-size: 1em;
+    }
+
+    .truck button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .bannier {
+        padding: 15px 3%;
+    }
+
+    .truck {
+        padding: 25px;
+    }
+
+    .truck h1 {
+        font-size: 2em;
+    }
+
+    .truck h3 {
+        font-size: 1.2em;
+    }
+
+    .truck button {
+        width: 90%; 
+        margin: 5px auto;
+        display: block;
+    }
 }

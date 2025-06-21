@@ -1,42 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="ber.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideIn 1s forwards;
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .pulse-animation {
+      animation: pulse 0.5s ease-in-out;
+    }
+  </style>
+  <link rel="stylesheet" href="ber.css" />
 </head>
 <body>
-    <header class="contenu">
-<div class="bannier">
-    <h1 id="loop">dan.dev <br> <h2><img id="source" src="code_8750790.png" alt="code" width="23">Ready to innovate</h2></h1>
+  <header class="contenu">
+    <div class="bannier">
+      <h1 id="loop">dan.dev <br>
+        <h2><img id="source" src="code_8750790.png" alt="code" width="23"> Ready to innovate</h2>
+      </h1>
 
-        <ul id="banniere">
-            <li><a href="#">Acceuil</a></li>
-            <li><a href="#">Apropos</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-</div>
-    </header>
-<section class="contenue">
-    <div class="truck">
-    
-    <h1>Frontend</h1>
-    <h1>Developper</h1>
+      <ul id="banniere">
+        <li><a href="#">Acceuil</a></li>
+        <li><a href="#">Apropos</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-<h3>Full stack & Data scientist student</h3>
-<h5>Développeur full stack et data scientiste, je crée des solutions innovantes alliant technologie et données</h5>
-<button>React</button><button>Java-script</button><button>Node.js</button><button>tailwind</button>
+  <section class="contenue">
+    <div class="truck" id="truck">
+      <h1>Frontend</h1>
+      <h1>Developper</h1>
 
-<br><br>
-<button>Project</button><button>Contact</button>
-<br><br>
-<div class="social">
-    <button ><img src="github_5968866.png" alt="hub" width="30"></button><button><img src="instagram_3991634.png" alt="inst" width="30"></button><button><img src="minus_9303347.png" alt="minus" width="30"></button>
-    <button><img src="whatsapp_3991652.png" alt="what" width="30"></button>
-</div>
-</section>
-</div>
+      <h3>Full stack & Data scientist student</h3>
+      <h5>Développeur full stack et data scientiste, je crée des solutions innovantes alliant technologie et données</h5>
+
+      <button>React</button>
+      <button>Java-script</button>
+      <button>Node.js</button>
+      <button>tailwind</button>
+
+      <br><br>
+      <button>Project</button>
+      <button>Contact</button>
+      <br><br>
+
+      <div class="social">
+        <button><img src="github_5968866.png" alt="hub" width="30"></button>
+        <button><img src="instagram_3991634.png" alt="inst" width="30"></button>
+        <button><img src="minus_9303347.png" alt="minus" width="30"></button>
+        <button><img src="whatsapp_3991652.png" alt="what" width="30"></button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <div class="banniere">
+        <h2>Acceuil</h2>
+        <h3>Frontend Developper</h3>
+        <h5>Je suis un développeur frontend passionné par le développement web et les technologies modernes. 
+          Je suis en constante recherche d'opportunités pour contribuer à des projets innovants et à des projets de qualité. 
+          Mon objectif est de créer des solutions créatives et performantes qui rendent l'expérience utilisateur plus fluide et intuitive.
+        </h5>
+        <div class="good">
+            <div id="good">
+                <button><img src="icons8-react-native-50.png" alt="rct" width="30"></button>
+        <button><img src="icons8-javascript-50.png" alt="js" width="30"></button>
+        <button><img src="icons8-nodejs-50.png" alt="node" width="30"></button>
+        <button><img src="icons8-tailwind-css-50.png" alt="tail" width="30"></button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const loop = document.getElementById("loop");
+    const elementsToAnimate = document.querySelectorAll(".truck h1, .truck h3, .truck h5, .truck button, .social button");
+
+    // Animation d'apparition à l'ouverture de page
+    window.addEventListener("load", () => {
+      elementsToAnimate.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add("fade-in");
+        }, index * 150);
+      });
+    });
+
+    // Animation pulsante au clic sur "dan.dev"
+    loop.addEventListener("click", () => {
+      loop.classList.add("pulse-animation");
+      setTimeout(() => {
+        loop.classList.remove("pulse-animation");
+      }, 500);
+    });
+  </script>
 </body>
 </html>

@@ -13,7 +13,6 @@ body {
 :root{
     --box-shadow: 0 0 25px rgba(161, 65, 250, 0.6);
 }
-
 /* === Header / Bannière === */
 .bannier {
     display: flex;
@@ -23,7 +22,6 @@ body {
     color: #6810f5;
     padding: 20px 5%;
 }
-
 .banniere {
     display: flex;
     flex-direction: column;
@@ -50,6 +48,7 @@ body {
     font-weight: 700;
     display: flex;
     align-items: center;
+    
 }
 
 .bannier h1 #loop {
@@ -66,7 +65,6 @@ body {
     display: flex;
     align-items: center;
 }
-
 .bannier h1 h2 img {
     margin-right: 8px;
     vertical-align: middle;
@@ -143,7 +141,11 @@ button:hover {
     font-style: italic;
     font-size: 20px;
     font-family: monospace;
-    animation: reverse;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+#ecrit:hover{
+    font-size: 24px;
+    color: #8bbef0;
 }
 /* === Contenu principal === */
 .contenue {
